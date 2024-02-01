@@ -33,9 +33,9 @@ public class ClienteService implements IGenericService {
     }
 
     @Override
-    public Long update(Object dto) {
+    public void update(Object dto) {
         ClienteDTO clienteDTO = (ClienteDTO) dto;
         Cliente cliente = (Cliente) ClienteMapper.toEntity(clienteDTO);
-        return clienteRepository.save(cliente).getId();
+        clienteRepository.save(cliente);
     }
 }

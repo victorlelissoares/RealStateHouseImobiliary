@@ -6,6 +6,6 @@ public interface IGenericService {
     Long create (Object dto);
     List<?> list ();
     void delete(Long id);
-    Long update(Object object);
+    void update(Object object);
 
 }

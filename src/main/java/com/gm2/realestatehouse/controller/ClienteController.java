@@ -39,8 +39,9 @@ public class ClienteController {
     }
 
     @PutMapping
-    public ResponseEntity<Long> update (@RequestBody ClienteDTO clienteDTO){
-        return ResponseEntity.ok(clienteService.update(clienteDTO));
+    public ResponseEntity<Void> update (@RequestBody ClienteDTO clienteDTO){
+        clienteService.update(clienteDTO);
+        return ResponseEntity.ok().build();
     }
 
 
