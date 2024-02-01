@@ -1,4 +1,4 @@
-package com.gm2.realestatehouse.helper.mapper;
+package com.gm2.realestatehouse.helper.mapper.interfaces;
 
 public interface GenericMapper {
     Object toDTO(Object object);
