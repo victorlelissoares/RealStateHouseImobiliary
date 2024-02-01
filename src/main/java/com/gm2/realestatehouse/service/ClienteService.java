@@ -28,11 +28,14 @@ public class ClienteService implements IGenericService {
     }
 
     @Override
-    public void delete() {
+    public void delete(Long idCliente) {
+        clienteRepository.deleteById(idCliente);
     }
 
     @Override
-    public Long update() {
-        return null;
+    public void update(Object dto) {
+        ClienteDTO clienteDTO = (ClienteDTO) dto;
+        Cliente cliente = (Cliente) ClienteMapper.toEntity(clienteDTO);
+        clienteRepository.save(cliente);
     }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 public interface IGenericService {
     Long create (Object dto);
     List<?> list ();
-    void delete();
-    Long update();
+    void delete(Long id);
+    void update(Object object);
 
 }
